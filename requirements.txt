@@ -12,7 +12,5 @@ numpy == 1.21.5
 # D:\shh\main.py: 2
 opencv_python == 4.5.5.62
 
-# D:\shh\main.py: 5
-tensorflow_gpu == 2.8.0
 
 tensorflow == 2.8.0
