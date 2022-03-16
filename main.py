@@ -6,13 +6,17 @@ import tensorflow as tf
 from flask import Flask, render_template, Response
 
 
+
+
+
+
 app = Flask(__name__)
 
 global word_dict,background,accumulated_weight,ROI_top,ROI_bottom,ROI_right,ROI_left
 word_dict = {0:'one', 1:'two', 2:'three', 3:'four', 4:'five', 5:'six', 6:'seven', 7:'eight', 8:'nine'}
 background = None
 accumulated_weight = 0.5
-
+model = keras.models.load_model('best_model_dataflair3.h5')
 ROI_top = 100
 ROI_bottom = 300
 ROI_right = 150
@@ -55,7 +59,7 @@ def segment_hand(frame, threshold=25):
         return (thresholded, hand_segment_max_cont)
 
 
-model = keras.models.load_model(r"D:\self_project_frameworks\hand action rec\new\best_model_dataflair3.h5")
+
 cam = cv2.VideoCapture(1)
 global num_frames
 
