@@ -60,7 +60,7 @@ def segment_hand(frame, threshold=25):
 
 
 
-cam = cv2.VideoCapture(1)
+cam = cv2.VideoCapture(0)
 global num_frames
 
     
@@ -140,6 +140,5 @@ def index():
 @app.route('/video_feed')
 def video_feed():
     return Response(gen(),mimetype='multipart/x-mixed-replace; boundary=frame')
-
 if __name__=="__main__":
-    app.run(host='0.0.0.0',debug=True,use_reloader=False)
+    app.run(host='0.0.0.0',port=8000,debug=True,use_reloader=False)
