@@ -60,7 +60,7 @@ def segment_hand(frame, threshold=25):
 
 
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(1)
 global num_frames
 
     
