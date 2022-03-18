@@ -9,7 +9,6 @@ from flask import Flask, render_template, Response
 
 
 
-
 app = Flask(__name__)
 
 global word_dict,background,accumulated_weight,ROI_top,ROI_bottom,ROI_right,ROI_left
@@ -60,13 +59,14 @@ def segment_hand(frame, threshold=25):
 
 
 
-cam = cv2.VideoCapture(1)
+
 global num_frames
 
     
 
 
 def gen():
+    cam = cv2.VideoCapture(1)
     num_frames =0
     while True:
         ret, frame = cam.read()
