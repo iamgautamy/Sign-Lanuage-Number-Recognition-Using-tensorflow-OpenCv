@@ -58,18 +58,19 @@ def segment_hand(frame, threshold=25):
         return (thresholded, hand_segment_max_cont)
 
 
-
-
+from imutils.video import VideoStream
+cam = VideoStream(src=0).start()
 global num_frames
 
     
 
 
 def gen():
-    cam = cv2.VideoCapture(0)
+    
     num_frames =0
     while True:
-        ret, frame = cam.read()
+
+        frame = cam.read()
 
     # flipping the frame to prevent inverted image of captured
     #frame...
