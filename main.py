@@ -66,7 +66,7 @@ global num_frames
 
 
 def gen():
-    cam = cv2.VideoCapture(1)
+    cam = cv2.VideoCapture(-1)
     num_frames =0
     while True:
         ret, frame = cam.read()
