@@ -27,4 +27,4 @@ tf.keras.layers.Dense(128, activation='relu'),
 tf.keras.layers.Dense(num_classes)
 
 # Accuracy and Confidence of Model
-Model shows an approx of 80% accuracy on both training and validation dataset And has mean confidence on faces over 80%
+Model shows an approx of 80% accuracy on both training and validation dataset And has mean confidence on of over 80%, But show significantly less accuracy of about 67% or less in some cases in real worl scenario.
